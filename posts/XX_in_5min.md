@@ -1,4 +1,4 @@
-# Integrate 11 messaging platforms in 5 minutes.
+# Integrate XX messaging platforms in 5 minutes.
 
 The task of making your bot or application available on 11 different platforms can be long and tedious. Broid allows you to do this very quickly.
 
@@ -8,6 +8,7 @@ First step is you have to sign in on all the platforms:
 - Messenger
 - Slack
 - Twitter
+- etc..
 
 ## Create an nodejS project
 
@@ -25,6 +26,7 @@ broid-twitter \
 broid-viber \
 broid-line \
 broid-kik \
+broid-flowdock \
 broid-callr \
 broid-twilio \
 broid-skype \
@@ -45,6 +47,7 @@ const R = require("ramda");
 
 const broidCallr = require("broid-callr");
 const broidDiscord = require("broid-discord");
+const broidFlowdock = require("broid-flowdock");
 const broidLine = require("broid-line");
 const broidKik = require("broid-kik");
 const broidMessenger = require("broid-messenger");
@@ -58,6 +61,7 @@ const broidViber = require("broid-viber");
 const clients = {
   callr: new broidCallr({}),
   discord: new broidDiscord({}),
+  flowdock: new broidFlowdock({});
   line: new broidLine({}),
   kik: new broidKik({}),
   messenger: new broidMessenger({}),
@@ -141,4 +145,4 @@ Rx.Observable.merge(...R.map(client => client.listen(), R.values(clients)))
 
 Easy?
 
-You find the code of this tutorial [here](https://github.com/broidHQ/11platforms/blob/master/index.js)
+You find the code of this tutorial [here](http://github.com/broidHQ/XXplatforms/blob/master/index.js)
